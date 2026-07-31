@@ -15,3 +15,5 @@ a:hover{ text-decoration-color:currentColor }
 .count-error{color:var(--focus)}
 .pr-count{font-weight:700}
 @media(prefers-color-scheme:dark){.section-icon{filter:invert(.84)}}
+.subsection-title{font-size:1rem;font-weight:650;margin:1rem 0 .25rem}
+.manuscript-list{margin-top:0}
