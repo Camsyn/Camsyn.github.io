@@ -3,7 +3,8 @@
 
   const updateCount = async (node) => {
     const queryUrl = new URL(node.href);
-    const query = queryUrl.searchParams.get("q");
+    const [owner, repository] = queryUrl.pathname.split("/").filter(Boolean);
+    const query = `repo:${owner}/${repository} ${queryUrl.searchParams.get("q")}`;
     const apiUrl = new URL("https://api.github.com/search/issues");
     apiUrl.searchParams.set("q", query);
     apiUrl.searchParams.set("per_page", "1");
